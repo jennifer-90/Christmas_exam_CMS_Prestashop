@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>smartsupp</name>
+    <displayName><![CDATA[Smartsupp Live Chat]]></displayName>
+    <version><![CDATA[2.1.9]]></version>
+    <description><![CDATA[Smartsupp combine le chat en direct et les chatbots pour vous faire gagner du temps et vous aider &agrave; transformer les visiteurs en clients fid&egrave;les.]]></description>
+    <author><![CDATA[Smartsupp]]></author>
+    <tab><![CDATA[advertising_marketing]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to uninstall Smartsupp Live Chat? You will lose all the data related to this module.]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

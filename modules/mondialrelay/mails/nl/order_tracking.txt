@@ -1,0 +1,32 @@
+
+[{shop_url}]
+
+Hallo {firstname} {lastname},
+
+Bedankt om te shoppen bij {shop_name} en Mondial Relay !
+
+BESTELLING: {order_name} Geplaatst op {date}
+
+BETALING: {payment}
+
+VERVOERDER: {carrier}
+
+{delivery_block_txt}
+
+{invoice_block_txt}
+
+U kunt uw bestelling bekijken en uw factuur downloaden via de sectie
+"Bestelgeschiedenis" [{history_url}]
+van uw klantenaccount door te klikken op "Mijn account"
+[{my_account_url}] op onze webshop.
+
+Als u een gastaccount heeft, kunt u uw bestelling volgen via de
+"Guest Tracking"
+[{guest_tracking_url}?id_order={order_name}]
+sectie op onze webshop.
+
+Tracking URL van uw bestelling met Mondial Relay : 
+[/{mondialrelay_tracking_url}]
+
+{shop_name} [{shop_url}] powered
+by PrestaShop(tm) [http://www.prestashop.com/]

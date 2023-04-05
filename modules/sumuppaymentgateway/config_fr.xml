@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>sumuppaymentgateway</name>
+    <displayName><![CDATA[Paiements en ligne SumUp]]></displayName>
+    <version><![CDATA[2.1.2]]></version>
+    <description><![CDATA[Paiements en ligne SumUp]]></description>
+    <author><![CDATA[Sumup]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

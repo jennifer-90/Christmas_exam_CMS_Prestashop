@@ -1,0 +1,7 @@
+/nbproject
+node_modules/
+views/**/*.LICENSE
+/202/build
+.idea
+yarn.lock
+package-lock.json

@@ -1,0 +1,530 @@
+name: foodstore
+display_name: foodstore
+version: 1.0.6
+theme_key: 471e522c19ee88a7815f7139c4e6c4c2
+author:
+  name: "ETS-Soft"
+  email: "pub@prestashop.com"
+  url: "http://www.prestashop.com"
+
+meta:
+  compatibility:
+      from: 1.7.0.0
+      to: ~
+
+  available_layouts:
+    layout-full-width:
+      name: Full Width
+      description: No side columns, ideal for distraction-free pages such as product pages.
+    layout-both-columns:
+      name: Three Columns
+      description: One large central column and 2 side columns.
+    layout-left-column:
+      name: Two Columns, small left column
+      description: Two columns with a small left column
+    layout-right-column:
+      name: Two Columns, small right column
+      description: Two columns with a small right column
+
+assets:
+  # If you're using this theme as child and you want to load
+  # the parent theme assets, uncomment this line.
+#  use_parent_assets: true
+
+  # The following lines are showing how to load assets in your page
+  # Uncomment and change value to start loading css or js files
+#  css:
+#    all:
+#      - id: custom-lib-style
+#        path: assets/css/custom-lib.css
+#    product:
+#      - id: product-style
+#        path: assets/css/product.css
+#        media: all
+#        priority: 200
+#  js:
+#    cart:
+#      - id: cat-extra-lib
+#        path: assets/js/cart-lib.js
+
+
+global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
+  modules:
+   to_enable:
+     - ps_linklist
+     - ps_categoryproducts
+     - ps_bestsellers
+     - ps_specials
+     - ps_newproducts
+     - ps_viewedproduct
+     - ps_categorytree_mod
+   to_reset:
+    - ets_megamenu
+    - ets_multilayerslider
+    - ets_mailchimpsync
+    - ets_reviewticker
+    - ets_purchasetogether
+    - pleasewait
+    - ybc_newsletter
+    - ybc_productimagehover
+    - ybc_themeconfig
+    - ybc_widget
+    - ybc_manufacturer
+  hooks:
+    modules_to_hook: 
+        actionAdminControllerSetMedia:
+            - dashactivity
+            - dashtrends
+            - dashgoals
+            - graphnvd3
+        actionAdminCurrenciesControllerSaveAfter:
+            - ps_currencyselector
+        actionAdminGroupsControllerSaveAfter:
+            - ps_featuredproducts
+        actionAdminMetaControllerUpdate_optionsAfter:
+            - gamification
+        actionAdminPerformanceControllerSaveAfter:
+            - gamification
+        actionAdminPreferencesControllerUpdate_optionsAfter:
+            - gamification
+        actionAdminStoresControllerSaveAfter:
+            - gamification
+        actionAdminStoresControllerUpdate_optionsAfter:
+            - ps_contactinfo
+        actionAdminThemesControllerUpdate_optionsAfter:
+            - gamification
+        actionAdminWebserviceControllerSaveAfter:
+            - gamification
+        actionAttributeDelete:
+            - ps_facetedsearch
+        actionAttributeGroupDelete:
+            - ps_facetedsearch
+        actionAttributeGroupSave:
+            - ps_facetedsearch
+        actionAttributePostProcess:
+            - ps_facetedsearch
+        actionAttributeSave:
+            - ps_facetedsearch
+        actionAuthentication:
+            - statsdata
+        actionCartSave:
+            - blockwishlist
+        actionCategoryAdd:
+            - ps_facetedsearch
+        actionCategoryDelete:
+            - ps_facetedsearch
+        actionCategoryUpdate:
+            - ps_facetedsearch
+            - ps_mainmenu
+            - ps_featuredproducts
+        actionCustomerAccountAdd:
+            - ps_emailsubscription
+            - statsdata
+        actionFeatureDelete:
+            - ps_facetedsearch
+        actionFeatureSave:
+            - ps_facetedsearch
+        actionFeatureValueDelete:
+            - ps_facetedsearch
+        actionFeatureValueSave:
+            - ps_facetedsearch
+        actionModuleInstallAfter:
+            - gamification
+        actionModuleRegisterHookAfter:
+            - ps_customeraccountlinks
+        actionModuleUnRegisterHookAfter:
+            - ps_customeraccountlinks
+        actionObjectCarrierAddAfter:
+            - gamification
+        actionObjectCartAddAfter:
+            - gamification
+        actionObjectCartRuleAddAfter:
+            - gamification
+        actionObjectCategoryAddAfter:
+            - ps_mainmenu
+        actionObjectCategoryDeleteAfter:
+            - ps_mainmenu
+        actionObjectCategoryUpdateAfter:
+            - ps_mainmenu
+        actionObjectCmsAddAfter:
+            - ps_mainmenu
+        actionObjectCmsDeleteAfter:
+            - ps_mainmenu
+        actionObjectCmsUpdateAfter:
+            - ps_mainmenu
+        actionObjectContactAddAfter:
+            - gamification
+        actionObjectCustomerAddAfter:
+            - dashactivity
+        actionObjectCustomerMessageAddAfter:
+            - dashactivity
+        actionObjectCustomerThreadAddAfter:
+            - dashactivity
+        actionObjectEmployeeAddAfter:
+            - gamification
+        actionObjectImageAddAfter:
+            - gamification
+        actionObjectLanguageAddAfter:
+            - ps_banner
+        actionObjectManufacturerAddAfter:
+            - ps_mainmenu
+        actionObjectManufacturerDeleteAfter:
+            - ps_mainmenu
+        actionObjectManufacturerUpdateAfter:
+            - ps_mainmenu
+        actionObjectOrderAddAfter:
+            - dashactivity
+            - dashproducts
+        actionObjectOrderReturnAddAfter:
+            - dashactivity
+        actionObjectProductAddAfter:
+            - ps_mainmenu
+        actionObjectProductDeleteAfter:
+            - ps_viewedproduct
+            - ps_mainmenu
+        actionObjectProductUpdateAfter:
+            - ps_viewedproduct
+            - ps_mainmenu
+        actionObjectShopAddAfter:
+            - gamification
+        actionObjectShopGroupAddAfter:
+            - gamification
+        actionObjectShopUpdateAfter:
+            - gamification
+        actionObjectSpecificPriceCoreAddAfter:
+            - ps_specials
+        actionObjectSpecificPriceCoreDeleteAfter:
+            - ps_specials
+        actionObjectSpecificPriceCoreUpdateAfter:
+            - ps_specials
+        actionObjectSupplierAddAfter:
+            - ps_mainmenu
+        actionObjectSupplierDeleteAfter:
+            - ps_mainmenu
+        actionObjectSupplierUpdateAfter:
+            - ps_mainmenu
+        actionOrderStatusPostUpdate:
+            - dashtrends
+            - ps_bestsellers
+        actionOrderStatusUpdate:
+            - gamification
+        actionProductAdd:
+            - ps_categoryproducts
+            - ps_bestsellers
+            - ps_featuredproducts
+            - ps_specials
+            - ps_newproducts
+        actionProductDelete:
+            - ps_categoryproducts
+            - ps_bestsellers
+            - ps_featuredproducts
+            - ps_specials
+            - ps_newproducts
+        actionProductSave:
+            - ps_facetedsearch
+        actionProductUpdate:
+            - ps_categoryproducts
+            - ets_purchasetogether
+            - ps_bestsellers
+            - ps_featuredproducts
+            - ps_specials
+            - ps_newproducts
+        actionSearch:
+            - dashproducts
+        actionShopDataDuplication:
+            - ps_imageslider
+            - ps_mainmenu
+        actionUpdateLangAfter:
+            - blockreassurance
+            - ps_linklist
+        actionValidateOrder:
+            - gamification
+        additionalCustomerFormFields:
+            - ps_emailsubscription
+        blogCategoriesBlock:
+            - ybc_blog_free
+        blogFeaturedPostsBlock:
+            - ybc_blog_free
+        blogGalleryBlock:
+            - ybc_blog_free
+        blogNewsBlock:
+            - ybc_blog_free
+        blogPopularPostsBlock:
+            - ybc_blog_free
+        blogSearchBlock:
+            - ybc_blog_free
+        blogSidebar:
+            - ybc_blog_free
+        blogSlidersBlock:
+            - ybc_blog_free
+        blogTagsBlock:
+            - ybc_blog_free
+        customcategories:
+            - ps_categorytree_mod
+        dashboardData:
+            - dashactivity
+            - dashtrends
+            - dashgoals
+            - dashproducts
+        dashboardZoneOne:
+            - dashactivity
+        dashboardZoneTwo:
+            - dashtrends
+            - dashgoals
+            - dashproducts
+        displayAdminAfterHeader:
+            - welcome
+            - ~
+        displayAdminCustomers:
+            - blockwishlist
+        displayAdminNavBarBeforeEnd:
+            - welcome
+        displayAdminProductsExtra:
+            - ets_purchasetogether
+        displayAdminStatsGraphEngine:
+            - graphnvd3
+        displayAdminStatsGridEngine:
+            - gridhtml
+        displayAdminStatsModules:
+            - pagesnotfound
+            - statsbestcategories
+            - statsbestcustomers
+            - statsbestproducts
+            - statsbestsuppliers
+            - statsbestvouchers
+            - statscarrier
+            - statscatalog
+            - statscheckup
+            - statsforecast
+            - statslive
+            - statsnewsletter
+            - statspersonalinfos
+            - statsproduct
+            - statsregistrations
+            - statssales
+            - statssearch
+            - statsstock
+        displayBackOfficeHeader:
+            - ybc_themeconfig
+            - ybc_manufacturer
+            - productcomments
+            - ets_reviewticker
+            - ets_mailchimpsync
+            - welcome
+            - ets_purchasetogether
+            - ybc_blog_free
+            - ybc_widget
+            - ybc_newsletter
+            - ets_multilayerslider
+            - ets_megamenu
+            - ~
+        displayBeforeBodyClosingTag:
+            - statsdata
+        displayBlock:
+            - ets_megamenu
+        displayCrossSellingShoppingCart:
+            - ps_featuredproducts
+        displayCustomerAccount:
+            - blockwishlist
+        displayFooter:
+            - ps_contactinfo
+            - ps_customeraccountlinks
+            - ps_linklist
+            - ps_emailsubscription
+            - ybc_themeconfig
+            - ets_reviewticker
+            - ets_purchasetogether
+            - ybc_blog_free
+            - ybc_widget
+            - ybc_newsletter
+        displayFooterBefore:
+            - pleasewait
+        displayFooterProduct:
+            - ps_viewedproduct
+            - ps_categoryproducts
+            - ets_purchasetogether
+        displayHome:
+            - ps_featuredproducts
+            - ybc_widget
+            - ps_newproducts
+            - ps_specials
+            - ps_bestsellers
+            - ybc_blog_free
+            - ybc_manufacturer
+            - ets_multilayerslider
+        displayHomeTab:
+            - ps_featuredproducts
+            - ps_newproducts
+            - ps_bestsellers
+            - ps_specials
+        displayHomeTabContent:
+            - ps_bestsellers
+            - ps_featuredproducts
+            - ps_specials
+            - ps_newproducts
+        displayLeftColumn:
+            - ps_facetedsearch
+            - ps_categorytree
+            - ybc_blog_free
+            - ybc_widget
+        displayLeftColumnProduct:
+            - ets_purchasetogether
+        displayMegaMenu:
+            - ets_megamenu
+        displayMLS:
+            - ets_multilayerslider
+        displayMLSConfigs:
+            - ets_multilayerslider
+        displayMLSLayer:
+            - ets_multilayerslider
+        displayMLSLayerSort:
+            - ets_multilayerslider
+        displayMLSSlide:
+            - ets_multilayerslider
+        displayMLSSlideInner:
+            - ets_multilayerslider
+        displayMLSSlider:
+            - ets_multilayerslider
+        displayMMItemBlock:
+            - ets_megamenu
+        displayMMItemColumn:
+            - ets_megamenu
+        displayMMItemMenu:
+            - ets_megamenu
+        displayMultiLayerSlide:
+            - ets_multilayerslider
+        displayMyAccountBlock:
+            - blockwishlist
+        displayNav:
+            - ybc_widget
+        displayNav1:
+            - ps_socialfollow
+        displayNav2:
+            - ps_customersignin
+            - blockwishlist
+            - ps_currencyselector
+            - ps_languageselector
+        displayOrderConfirmation2:
+            - ps_featuredproducts
+        displayPaymentReturn:
+            - ps_checkpayment
+            - ps_wirepayment
+        displayProductAdditionalInfo:
+            - ps_sharebuttons
+            - ets_purchasetogether
+            - blockwishlist
+        displayProductButtons:
+            - ps_sharebuttons
+        displayReassurance:
+            - blockreassurance
+        displayRightColumn:
+            - ybc_widget
+            - blockwishlist
+        displaySearch:
+            - ps_searchbar
+        displayTop:
+            - ps_searchbar
+            - ps_shoppingcart
+            - ets_purchasetogether
+            - ybc_widget
+            - ets_megamenu
+        displayTopColumn:
+            - ybc_widget
+            - ets_multilayerslider
+        NewsletterCustom:
+            - ybc_newsletter
+        paymentOptions:
+            - ps_checkpayment
+            - ps_wirepayment
+        productcustom:
+            - blockwishlist
+        productImageHover:
+            - ybc_productimagehover
+        productSearchProvider:
+            - ps_facetedsearch
+        search:
+            - statssearch
+        ybcBlockSocial:
+            - ybc_themeconfig
+        ybcCopyright:
+            - ybc_themeconfig
+        ybcCustom1:
+            - ybc_widget
+        ybcCustom2:
+            - ybc_widget
+        ybcCustom3:
+            - ybc_widget
+        ybccustom4:
+            - ybc_manufacturer
+            - ybc_widget
+        ybcLayoutUpdate:
+            - ybc_themeconfig
+
+  image_types:
+    cart_default:
+      width: 130
+      height: 130
+      scope: [products]
+    small_default:
+      width: 100
+      height: 100
+      scope: [products, categories, manufacturers, suppliers]
+    medium_default:
+      width: 452
+      height: 452
+      scope: [products, manufacturers, suppliers]
+    home_default:
+      width: 450
+      height: 450
+      scope: [products]
+    large_default:
+      width: 800
+      height: 800
+      scope: [products, manufacturers, suppliers]
+    category_default:
+      width: 850
+      height: 226
+      scope: [categories]
+    stores_default:
+      width: 170
+      height: 115
+      scope: [stores]
+
+theme_settings:
+  default_layout: layout-full-width
+  layouts:
+    category: layout-left-column
+    best-sales: layout-left-column
+    new-products: layout-left-column
+    prices-drop: layout-left-column
+    search: layout-left-column
+    contact: layout-full-width
+
+dependencies:
+  modules:
+   - blockwishlist
+   - productcomments
+   - ps_shoppingcart
+   - ets_megamenu
+   - ets_multilayerslider
+   - ets_mailchimpsync
+   - ets_reviewticker
+   - ets_purchasetogether
+   - ps_featuredproducts
+   - ps_specials
+   - ps_categoryproducts
+   - ps_bestsellers
+   - ps_newproducts
+   - ps_viewedproduct
+   - pleasewait
+   - ybc_newsletter
+   - ybc_productimagehover
+   - ybc_themeconfig
+   - ybc_widget
+   - ybc_blog_free
+   - ybc_manufacturer
+   - ps_categorytree_mod
+   - ps_customeraccountlinks
+   - ps_emailsubscription
